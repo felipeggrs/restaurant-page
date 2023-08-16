@@ -1,5 +1,12 @@
-#bgImg {
+#homepageImage {
   width: 400px; /* Set appropriate width */
   height: 400px; /* Set appropriate height */
-  background-position: 100%;
+  /* background-position: 100%; */
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
