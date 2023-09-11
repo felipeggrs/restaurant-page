@@ -3,8 +3,6 @@ import homePage from "./homepage";
 import menuPage from "./menupage";
 import contactPage from "./contactpage";
 
-homePage();
-
 function tabButtons() {
   const btnContainer = document.createElement("div");
   const homeBtn = document.createElement("button");
@@ -16,12 +14,17 @@ function tabButtons() {
   menuBtn.textContent = "Menu";
   contactBtn.textContent = "Contact";
 
-  document.body.prepend(btnContainer);
+  const mainContainer = document.createElement("div");
+  mainContainer.setAttribute("class", "mainContainer");
+
   btnContainer.appendChild(homeBtn);
   btnContainer.appendChild(menuBtn);
   btnContainer.appendChild(contactBtn);
+  mainContainer.appendChild(btnContainer);
+  document.body.prepend(mainContainer);
 
   return {
+    mainContainer,
     btnContainer,
     homeBtn,
     menuBtn,
@@ -31,23 +34,31 @@ function tabButtons() {
 
 const buttons = tabButtons();
 
+homePage(buttons.mainContainer);
+
 buttons.homeBtn.addEventListener("click", () => {
   document.body.innerHTML = "";
-  document.body.appendChild(buttons.btnContainer);
-  homePage();
+  buttons.mainContainer.innerHTML = "";
+  homePage(buttons.mainContainer);
+  document.body.prepend(buttons.mainContainer);
+  buttons.mainContainer.prepend(buttons.btnContainer);
   console.log("Switched to Home");
 });
 
 buttons.menuBtn.addEventListener("click", () => {
   document.body.innerHTML = "";
-  document.body.appendChild(buttons.btnContainer);
-  menuPage();
+  buttons.mainContainer.innerHTML = "";
+  menuPage(buttons.mainContainer);
+  document.body.prepend(buttons.mainContainer);
+  buttons.mainContainer.prepend(buttons.btnContainer);
   console.log("Switched to Menu");
 });
 
 buttons.contactBtn.addEventListener("click", () => {
   document.body.innerHTML = "";
-  document.body.appendChild(buttons.btnContainer);
-  contactPage();
+  buttons.mainContainer.innerHTML = "";
+  contactPage(buttons.mainContainer);
+  document.body.prepend(buttons.mainContainer);
+  buttons.mainContainer.prepend(buttons.btnContainer);
   console.log("Switched to Contact");
 });

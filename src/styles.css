@@ -99,6 +99,37 @@ p {
   width: 500px;
 }
 
-.centeredPara {
+body {
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+}
+
+.mainContainer {
+  background-color: rgb(240, 234, 214);
+  border: 2px solid #c7b89d; /* Add a solid border with a slightly darker color */
+  border-radius: 10px; /* Increase border-radius for rounded corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  padding: 20px; /* Increase padding for spacing */
+  margin: 10px;
+}
+
+button {
+  display: inline-block;
+  padding: 5px 20px;
+  background-color: #f0eadd; /* Parchment color */
+  color: #333; /* Text color */
+  font-size: 16px;
   text-align: center;
+  text-decoration: none;
+  border: 2px solid #c7b89d; /* A slightly darker shade than the background */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #c7b89d; /* Slightly darker color on hover */
+  color: #fff; /* Text becomes white on hover */
+  transform: scale(1.05); /* Slight scale-up effect on hover */
 }
