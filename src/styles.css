@@ -105,12 +105,18 @@ body {
   background-size: cover;
 }
 
+.btnContainer {
+  position: relative;
+  padding: 5px;
+  border-bottom: 2px solid #c7b89d; /* Solid line border */
+}
+
 .mainContainer {
   background-color: rgb(240, 234, 214);
   border: 2px solid #c7b89d; /* Add a solid border with a slightly darker color */
   border-radius: 10px; /* Increase border-radius for rounded corners */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-  padding: 20px; /* Increase padding for spacing */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 0px 10px;
   margin: 10px;
 }
 
