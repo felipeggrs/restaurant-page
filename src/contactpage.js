@@ -13,7 +13,7 @@ function contactPage(container) {
   contentContainer.setAttribute("id", "content");
   pageHead.textContent = "Felipe's Trattoria";
   pageImage.setAttribute("style", `background-image: url(${contactImg})`);
-  pageImage.setAttribute("id", "pageImage");
+  pageImage.setAttribute("class", "pageImage");
   pagePara.textContent =
     "Ciao! 🍝 Need to reach us? Don't worry, we're not trapped in a pasta maze, but we are here to untangle any spaghetti-related problems you might have. Whether you want to talk pizza toppings, pasta shapes, or just share your deepest lasagna secrets, our tomato-sauce-stained phone lines and cheese-covered email servers are ready for your saucy messages. Feel free to drop us a line, and we promise not to toss your inquiries in the air (unless it's pizza dough). Buon divertimento! 🍕🤣";
 
